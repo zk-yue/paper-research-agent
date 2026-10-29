@@ -1,0 +1,34 @@
+# Start from an empty source distribution, then include reviewed source types.
+# A local data directory must never become package data through auto-discovery.
+global-exclude *
+include pyproject.toml requirements.txt README.md README.en.md LICENSE
+include CONTRIBUTING.md SECURITY.md Makefile MANIFEST.in .gitignore
+include .env.example .editorconfig .nvmrc
+include cli.py codex_llm.py extract_papers.py graph.py history.py llm.py main.py
+include manage_papers.py paper_config.py settings.py state.py storage.py tools.py
+recursive-include agents *.py
+recursive-include backend *.py
+recursive-include scripts *.py
+recursive-include tests *.py
+include tests/fixtures/retrieval_benchmark.json
+include config/papers_keywords.example.json
+recursive-include document *.md
+recursive-include .github *.yml *.yaml *.md
+include frontend/README.md frontend/index.html frontend/.gitignore
+include frontend/package.json frontend/package-lock.json frontend/eslint.config.js
+include frontend/tsconfig.json frontend/tsconfig.app.json frontend/tsconfig.node.json
+include frontend/vite.config.ts
+recursive-include frontend/src *.ts *.tsx *.css
+recursive-include frontend/public *.svg
+recursive-include frontend/tests *.mjs
+prune backend/data
+prune task_data
+prune history
+prune runs
+prune outputs
+prune papers
+prune instruction_presets
+prune review_templates
+prune frontend/node_modules
+prune frontend/dist
+global-exclude __pycache__ *.py[cod] .DS_Store

@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+
+# Environment
+.env
+.env.*
+!.env.example
+*.env
+!.env.example
+
+# Authentication belongs to the local CLI / machine, never the repository.
+.codex/
+.ssh/
+.aws/
+.azure/
+.config/gcloud/
+auth.json
+credentials.json
+credentials-*.json
+client_secret*.json
+service-account*.json
+.netrc
+.npmrc
+.pypirc
+.git-credentials
+.gitconfig
+.bash_history
+.zsh_history
+.python_history
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Task data & history
+task_data/
+history/
+outputs/
+runs/
+papers/**
+!papers/.gitkeep
+instruction_presets/**
+review_templates/**
+config/papers_keywords.json
+config/*.local.*
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+release/
+releases/
+
+# Frontend
+frontend/dist/
+node_modules/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+backend/data/prompt_logs/
+.omc/
+.claude/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report reproducible application behavior with sanitized details.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use a synthetic example. Never attach `.env`, authentication files,
+        raw prompt logs, private papers, or complete task directories.
+        For a security issue, follow SECURITY.md instead of posting it publicly.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: What did you expect, and what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal, non-sensitive topic or sample input.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python and Node versions, repository commit, model provider and CLI version if relevant. Do not include credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Include only the relevant error text after removing tokens, personal paths, research prompts and document content.

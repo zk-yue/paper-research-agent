@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused improvement to the research workflow.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the research workflow and the current limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include a concrete example and how you would evaluate success.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or trade-offs
+      description: Note changes to model usage, latency, data access, or existing workflows.
